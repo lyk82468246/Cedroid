@@ -5,11 +5,11 @@ namespace Cedroid.App.ViewModels;
 
 public sealed partial class MainWindowViewModel : ObservableObject
 {
-    public string ProductName => CedroidBuildInfo.ProductName;
+    public string ProductName { get; } = CedroidBuildInfo.ProductName;
 
-    public string Stage => CedroidBuildInfo.Stage;
+    public string Stage { get; } = CedroidBuildInfo.Stage;
 
-    public string Architecture => CedroidBuildInfo.Architecture;
+    public string Architecture { get; } = CedroidBuildInfo.Architecture;
 
     public IReadOnlyList<FoundationItem> FoundationItems { get; } =
     [
