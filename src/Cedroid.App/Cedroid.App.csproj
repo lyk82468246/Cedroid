@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <PackageReference Include="Avalonia" />
+    <PackageReference Include="Avalonia.Desktop" />
+    <PackageReference Include="Avalonia.Fonts.Inter" />
+    <PackageReference Include="Avalonia.Themes.Fluent" />
+    <PackageReference Include="CommunityToolkit.Mvvm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Cedroid.Contracts/Cedroid.Contracts.csproj" />
+    <ProjectReference Include="../Cedroid.Core/Cedroid.Core.csproj" />
+    <ProjectReference Include="../Cedroid.Platform.Abstractions/Cedroid.Platform.Abstractions.csproj" />
+    <ProjectReference Include="../Cedroid.Qmp/Cedroid.Qmp.csproj" />
+  </ItemGroup>
+</Project>

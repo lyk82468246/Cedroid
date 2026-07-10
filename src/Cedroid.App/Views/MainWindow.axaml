@@ -1,0 +1,61 @@
+<Window
+    x:Class="Cedroid.App.Views.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Width="1080"
+    Height="700"
+    MinWidth="760"
+    MinHeight="520"
+    Title="Cedroid">
+  <Grid RowDefinitions="Auto,*" Background="#0B1016">
+    <Border Padding="28,22" Background="#111923" BorderBrush="#223042" BorderThickness="0,0,0,1">
+      <Grid ColumnDefinitions="*,Auto">
+        <StackPanel Spacing="4">
+          <TextBlock FontSize="30" FontWeight="SemiBold" Text="{Binding ProductName}" />
+          <TextBlock Foreground="#91A4BA" Text="Windows CE and Windows Mobile virtual machine framework" />
+        </StackPanel>
+        <Border Grid.Column="1" Padding="12,6" Background="#173B2B" CornerRadius="14" VerticalAlignment="Center">
+          <TextBlock Foreground="#72E0A5" Text="{Binding Stage}" />
+        </Border>
+      </Grid>
+    </Border>
+
+    <Grid Grid.Row="1" Margin="28" ColumnDefinitions="320,24,*">
+      <Border Padding="22" Background="#111923" CornerRadius="12">
+        <StackPanel Spacing="16">
+          <TextBlock FontSize="18" FontWeight="SemiBold" Text="Architecture" />
+          <TextBlock Foreground="#AFC0D2" Text="{Binding Architecture}" TextWrapping="Wrap" />
+          <Border Height="1" Background="#263445" />
+          <TextBlock FontSize="16" FontWeight="SemiBold" Text="First target" />
+          <TextBlock Foreground="#AFC0D2" Text="Raspberry Pi OS ARM64, with Android following after the portable core is stable." TextWrapping="Wrap" />
+          <TextBlock Margin="0,12,0,0" Foreground="#6F849B" Text="No proprietary ROMs are bundled. Users import legally obtained images." TextWrapping="Wrap" />
+        </StackPanel>
+      </Border>
+
+      <Border Grid.Column="2" Padding="22" Background="#111923" CornerRadius="12">
+        <Grid RowDefinitions="Auto,16,*">
+          <StackPanel>
+            <TextBlock FontSize="18" FontWeight="SemiBold" Text="Foundation status" />
+            <TextBlock Margin="0,4,0,0" Foreground="#91A4BA" Text="The repository skeleton is ready for incremental implementation." />
+          </StackPanel>
+          <ItemsControl Grid.Row="2" ItemsSource="{Binding FoundationItems}">
+            <ItemsControl.ItemTemplate>
+              <DataTemplate>
+                <Border Margin="0,0,0,10" Padding="16" Background="#17212D" CornerRadius="8">
+                  <Grid ColumnDefinitions="Auto,14,*,Auto">
+                    <Border Width="10" Height="10" Background="#5CD99A" CornerRadius="5" VerticalAlignment="Center" />
+                    <StackPanel Grid.Column="2" Spacing="2">
+                      <TextBlock FontWeight="SemiBold" Text="{Binding Name}" />
+                      <TextBlock Foreground="#91A4BA" Text="{Binding Detail}" />
+                    </StackPanel>
+                    <TextBlock Grid.Column="3" Foreground="#AFC0D2" Text="{Binding Ready}" VerticalAlignment="Center" />
+                  </Grid>
+                </Border>
+              </DataTemplate>
+            </ItemsControl.ItemTemplate>
+          </ItemsControl>
+        </Grid>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

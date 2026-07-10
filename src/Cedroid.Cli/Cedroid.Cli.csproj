@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Cedroid.Contracts/Cedroid.Contracts.csproj" />
+    <ProjectReference Include="../Cedroid.Core/Cedroid.Core.csproj" />
+  </ItemGroup>
+</Project>

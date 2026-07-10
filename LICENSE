@@ -1,0 +1,17 @@
+SPDX-License-Identifier: GPL-2.0-only
+
+Cedroid is free software; you may redistribute it and/or modify it under
+the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation.
+
+Cedroid is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.
+
+The complete, canonical license text is available from the GNU Project:
+https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt
+
+Third-party components retain their own licenses. Microsoft Windows CE,
+Windows Mobile, SDK, BSP, ROM, firmware, and OEM materials are not part of
+Cedroid and are not licensed by this file.

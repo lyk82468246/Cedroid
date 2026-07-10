@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose a scoped feature or machine capability
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What concrete user or compatibility problem should be solved?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed outcome
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - .NET control plane
+        - Avalonia UI
+        - QMP or process supervision
+        - QEMU machine or device
+        - Windows CE guest driver
+        - Linux host integration
+        - Android host integration
+        - Documentation or tooling
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Compatibility evidence and references
+      description: Link public specifications or describe legally obtained test material without uploading it.

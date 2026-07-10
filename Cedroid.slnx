@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Cedroid.App/Cedroid.App.csproj" />
+    <Project Path="src/Cedroid.Cli/Cedroid.Cli.csproj" />
+    <Project Path="src/Cedroid.Contracts/Cedroid.Contracts.csproj" />
+    <Project Path="src/Cedroid.Core/Cedroid.Core.csproj" />
+    <Project Path="src/Cedroid.Platform.Abstractions/Cedroid.Platform.Abstractions.csproj" />
+    <Project Path="src/Cedroid.Qmp/Cedroid.Qmp.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Cedroid.Core.Tests/Cedroid.Core.Tests.csproj" />
+    <Project Path="tests/Cedroid.Qmp.Tests/Cedroid.Qmp.Tests.csproj" />
+  </Folder>
+</Solution>

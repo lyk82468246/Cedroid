@@ -1,0 +1,10 @@
+{
+  "dotnet.defaultSolution": "Cedroid.slnx",
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/bin": true,
+    "**/obj": true,
+    ".packages": true
+  }
+}

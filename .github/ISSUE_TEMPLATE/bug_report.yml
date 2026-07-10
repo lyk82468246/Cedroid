@@ -1,0 +1,44 @@
+name: Bug report
+description: Report reproducible Cedroid behavior
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach proprietary ROMs, firmware, SDKs, or BSP files.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Cedroid version or commit
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host OS and architecture
+      placeholder: Raspberry Pi OS 64-bit, Raspberry Pi 5
+    validations:
+      required: true
+  - type: input
+    id: guest
+    attributes:
+      label: Guest and machine profile
+      placeholder: WM6 / cedroid-devemu
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs
+      description: Remove personal data and do not include proprietary binary content.
