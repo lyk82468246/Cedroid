@@ -18,8 +18,9 @@ public sealed class QmpClientTests
         Queue<string> ids = new(["id-1", "id-2"]);
         await using var client = new QmpClient(input, output, ids.Dequeue);
 
-        await client.ConnectAsync();
-        System.Text.Json.JsonElement result = await client.ExecuteAsync("query-status");
+        CancellationToken cancellationToken = TestContext.Current.CancellationToken;
+        await client.ConnectAsync(cancellationToken);
+        System.Text.Json.JsonElement result = await client.ExecuteAsync("query-status", cancellationToken: cancellationToken);
 
         Assert.True(client.IsConnected);
         Assert.Equal(10, client.Greeting?.Major);
@@ -37,6 +38,6 @@ public sealed class QmpClientTests
         await using var client = new QmpClient(stream);
 
         await Assert.ThrowsAsync<InvalidOperationException>(
-            () => client.ExecuteAsync("query-status"));
+            () => client.ExecuteAsync("query-status", cancellationToken: TestContext.Current.CancellationToken));
     }
 }

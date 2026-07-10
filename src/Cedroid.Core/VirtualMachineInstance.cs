@@ -4,7 +4,7 @@ namespace Cedroid.Core;
 
 public sealed class VirtualMachineInstance
 {
-    private static readonly IReadOnlyDictionary<VirtualMachineState, HashSet<VirtualMachineState>> AllowedTransitions =
+    private static readonly Dictionary<VirtualMachineState, HashSet<VirtualMachineState>> AllowedTransitions =
         new Dictionary<VirtualMachineState, HashSet<VirtualMachineState>>
         {
             [VirtualMachineState.Stopped] = [VirtualMachineState.Starting],
