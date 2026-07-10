@@ -15,8 +15,9 @@ Status: in progress
 - [x] Platform capability abstractions
 - [x] Initial unit tests
 - [x] Agent context and planning structure
+- [x] Local .NET restore, build, test, and format
 - [ ] Clean GitHub Actions build and test
-- [ ] Initial repository pushed to GitHub
+- [x] Initial repository pushed to GitHub
 
 ## Next milestone: M1 QEMU smoke host
 
